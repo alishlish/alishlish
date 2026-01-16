@@ -1,190 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Alisha Mishra - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+// Fade-in animation for sections on scroll
+const fadeInSections = document.querySelectorAll('.fade-in-section');
 
-    <!-- Header Section -->
-    <header>
-        <a href="#about">about.</a>
-        <a href="#projects">projects.</a>
-        <a href="#other">other.</a>
-        <a href="#contact">contact.</a>
-    </header>
+const fadeInObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+});
 
-    <!-- Main Section (About) -->
-    <section class="main-section fade-in-section" id="about">
-        <div class="left">
-            <h1 class="name">alisha <span>mishra</span></h1>
-            <p class="description">
-                Hi! I'm Alisha, a current sophomore studying data science at the University of California, Irvine. With this degree, I aim to use machine learning to help optimize cybersecurity protocols (as cybersecurity has always been an interest). Alongside this, I am heavily interested in space, so breaking into aerospace related fields would be a dream come true!
-            </p>
-        </div>
-        <div class="right">
-            <img src="profilepic.jpeg" alt="Profile Picture" class="profile-picture">
-        </div>
-    </section>
+fadeInSections.forEach(section => {
+  fadeInObserver.observe(section);
+});
 
-    <!-- Projects Section -->
-    <section class="projects-section fade-in-section" id="projects">
-        <h2 class="section-title">projects.</h2>
-        <div class="project-grid">
-        
-            <!-- AI Exoplanet Detector Project -->
-            <div class="project-card">
-                <img src="ai_exoplanet_detector.png" alt="AI Exoplanet Detector">
-                <p class="description">
-                    <strong>AI Exoplanet Detector</strong><br>
-                    Developed a machine learning algorithm to detect exoplanets using telescope light curve datasets. Utilized CNNs, KNNs, and SMOTE data augmentation, achieving high accuracy in predictions after over 380 test runs.
-                    <a href="http://tinyurl.com/4s3y4rd8" target="_blank">View Presentation</a>
-                </p>
-                <!-- Skill Bars -->
-                <div class="skills">
-                    <div class="skill">
-                        <p>Python</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="90"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Machine Learning</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Data Analysis</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="80"></div></div>
-                    </div>
-                </div>
-            </div>
+// Skill bar animation on scroll
+const skillBars = document.querySelectorAll('.skill-level');
 
-            <!-- Research Internship Project -->
-            <div class="project-card">
-                <img src="research_diagram.png" alt="Research Internship Diagram">
-                <p class="description">
-                    <strong>Research Internship - Florida State University</strong><br>
-                    Conducted extensive simulations using SOLIDWORKS and ABAQUS to improve bioinspired materials (nacre) used by NASA for space vehicles, achieving a 20% enhancement in strength and flexibility. Collaborated with academic experts and analyzed data with R to explore structural-property correlations.
-                </p>
-                <!-- Skill Bars -->
-                <div class="skills">
-                    <div class="skill">
-                        <p>SOLIDWORKS</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>ABAQUS</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="80"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Data Analysis (R)</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="75"></div></div>
-                    </div>
-                </div>
-            </div>
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const skillBar = entry.target;
+      const targetWidth = skillBar.getAttribute('data-width');
+      
+      // Add a small delay for a more natural feel
+      setTimeout(() => {
+        skillBar.style.width = targetWidth + '%';
+      }, 200);
+      
+      // Only animate once
+      skillObserver.unobserve(skillBar);
+    }
+  });
+}, {
+  threshold: 0.5
+});
 
-            <!-- Boba Shop Data Analysis Project -->
-            <div class="project-card">
-                <img src="boba_data_analysis.png" alt="Boba Shop Data Analysis">
-                <p class="description">
-                    <strong>Boba Shop Data Analysis</strong><br>
-                    Implemented K-means clustering and Ridge regression to analyze geographical patterns of boba shop ratings. Optimized prediction accuracy through GridSearchCV.
-                    <a href="https://github.com/alishlish/bobadataanalysis" target="_blank">View Research</a>
-                </p>
-                <!-- Skill Bars -->
-                <div class="skills">
-                    <div class="skill">
-                        <p>Python</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>K-means Clustering</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="80"></div></div>
-                    </div>
-                    <div class="skill">
-                        <p>Ridge Regression</p>
-                        <div class="skill-bar"><div class="skill-level" data-width="75"></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+skillBars.forEach(bar => {
+  skillObserver.observe(bar);
+});
 
-    <!-- Other Section -->
-    <section class="other-section fade-in-section" id="other">
-        <div class="content"></div>
-        <h2 class="section-title">other.</h2>
-        <p class="section-blurb">
-            Outside of academics and projects, I have a variety of hobbies that keep me inspired and balanced. Here are some of my favorite activities and interests!
-        </p>
-        <div class="hobbies-collage">
-            <!-- Card 1 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('mountain\ mama.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>Hiking through nature is my way of recharging. The fresh air and views keep me grounded and inspired!</p>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('in\ my\ baking\ era.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>I've always loved sweets, and baking allows me to be creative in another aspect of my life.</p>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('_.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>I love discovering and learning about skincare products. It's my way of slowing down, looking inward, and caring about myself.</p>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('getaway.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>In recent years, I've become more into fashion and accessories. It's another way of me using my creative side!</p>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('matcha.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>In the last two years, I've fallen in love with matcha green tea. Along with making it at home, I love trying different matcha flavored treats at shops!</p>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="hobby-card">
-                <div class="card-front" style="background-image: url('‧͙⁺˚_･༓☾.jpeg');">
-                </div>
-                <div class="card-back">
-                    <p>Journaling keeps me balanced and focused. It's my go-to activity for relaxation and mental clarity.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section fade-in-section" id="contact">
-        <div class="content"></div>
-        <h2 class="section-title">contact.</h2>
-        <div class="contact-icons">
-            <a href="mailto:alishamishra082@gmail.com" target="_blank"><img src="email-icon.png" alt="Email Icon"></a>
-            <a href="https://www.linkedin.com/in/alishamishra23" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn Icon"></a>
-            <a href="https://github.com/alishlish" target="_blank"><img src="github-icon.png" alt="GitHub Icon"></a>
-        </div>
-    </section>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+// Smooth scroll for navigation links (extra enhancement)
+document.querySelectorAll('header a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
