@@ -1,21 +1,59 @@
+// Fade-in animation for sections on scroll
+const fadeInSections = document.querySelectorAll('.fade-in-section');
 
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 1.3) {
-            section.style.opacity = '1';
-        }
-    });
+const fadeInObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
 });
 
-window.addEventListener('scroll', function() {
-    const skills = document.querySelectorAll('.skill-level');
+fadeInSections.forEach(section => {
+  fadeInObserver.observe(section);
+});
 
-    skills.forEach(skill => {
-        const rect = skill.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 1.3 && skill.style.width === '0px') {
-            skill.style.width = skill.getAttribute('style').split(":")[1].trim();
-        }
-    });
+// Skill bar animation on scroll
+const skillBars = document.querySelectorAll('.skill-level');
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const skillBar = entry.target;
+      const targetWidth = skillBar.getAttribute('data-width');
+      
+      // Add a small delay for a more natural feel
+      setTimeout(() => {
+        skillBar.style.width = targetWidth + '%';
+      }, 200);
+      
+      // Only animate once
+      skillObserver.unobserve(skillBar);
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+skillBars.forEach(bar => {
+  skillObserver.observe(bar);
+});
+
+// Smooth scroll for navigation links (extra enhancement)
+document.querySelectorAll('header a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
 });
