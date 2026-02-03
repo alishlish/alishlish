@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alisha mishra | data science & ml</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- animated data visualization background -->
+    <canvas id="dataCanvas"></canvas>
+
+    <div class="content-wrapper">
+        <!-- navigation -->
+        <nav>
+            <div class="logo">alisha mishra</div>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#leadership">leadership</a></li>
+                <li><a href="#beyond">beyond</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- hero -->
+        <section class="hero" id="about">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>turning data into <strong>insights</strong></h1>
+                    <p class="subtitle">data scientist · ml engineer · storyteller</p>
+                    <p class="bio">
+                        hey! i'm alisha, a third-year data science student at UC irvine who gets excited about finding patterns in messy datasets and building ml models that actually work. currently leading WiCyS at UCI and spending way too much time tweaking hyperparameters (but honestly, it's worth it when the accuracy jumps).
+                    </p>
+                    <p class="bio">
+                        when i'm not debugging python or exploring new ML architectures, you'll find me DJing at KUCI radio, optimizing my matcha-making process, or going down rabbit holes about nlp and data visualization.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">see my work</a>
+                        <a href="DS Resume - Alisha Mishra.pdf" class="btn" target="_blank">resume</a>
+                        <a href="#contact" class="btn">let's chat</a>
+                    </div>
+                </div>
+                <div class="profile-container">
+                    <div class="data-ring ring-1"></div>
+                    <div class="data-ring ring-2"></div>
+                    <div class="data-ring ring-3"></div>
+                    <div class="data-point"></div>
+                    <div class="data-point"></div>
+                    <div class="data-point"></div>
+                    <div class="data-point"></div>
+                    <div class="data-point"></div>
+                    <img src="IMG_9340 (1).jpg" alt="alisha mishra" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <!-- experience timeline -->
+        <section id="experience">
+            <div class="section-header">
+                <div class="section-number">01</div>
+                <h2 class="section-title">experience</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">june 2025 – present</div>
+                    <h3 class="timeline-title">president</h3>
+                    <p class="timeline-org">women in cybersecurity, UC irvine chapter</p>
+                    <p class="timeline-desc">• grew our community from 5 to 20+ active members through targeted outreach and engaging technical content</p>
+                    <p class="timeline-desc">• scaled programming from 3 to 9 events per quarter, tracking metrics to keep improving what we offer</p>
+                    <p class="timeline-desc">• built a 10-person executive team with clear workflows (coordination is now 3x faster!)</p>
+                    <p class="timeline-desc">• led hands-on workshops for 60+ students covering OSINT, threat analysis, cloud security, and CTF challenges</p>
+                    <div class="timeline-links">
+                        <a href="https://wicys-uci-website.com" target="_blank" class="timeline-link">website</a>
+                        <a href="https://instagram.com/wicys_uci" target="_blank" class="timeline-link">instagram</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">may 2023 – jan 2024</div>
+                    <h3 class="timeline-title">research intern</h3>
+                    <p class="timeline-org">south dakota state university · mechanical engineering dept</p>
+                    <p class="timeline-desc">• analyzed 600+ structural simulations in python and R, identifying material designs with 19% better strength-to-weight ratios</p>
+                    <p class="timeline-desc">• built reproducible statistical workflows for simulation analysis, feature engineering, and model validation</p>
+                    <p class="timeline-desc">• synthesized 50+ research papers into actionable experiment strategies for the team</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- skills -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">02</div>
+                <h2 class="section-title">technical toolkit</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>programming & data</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">javascript</span>
+                        <span class="skill-tag">typescript</span>
+                        <span class="skill-tag">git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>ml & statistics</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">regression</span>
+                        <span class="skill-tag">clustering</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">time-series</span>
+                        <span class="skill-tag">hypothesis testing</span>
+                        <span class="skill-tag">experimental design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>frameworks & tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">pandas</span>
+                        <span class="skill-tag">numpy</span>
+                        <span class="skill-tag">react</span>
+                        <span class="skill-tag">tableau</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">supabase</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section id="projects">
+            <div class="section-header">
+                <div class="section-number">03</div>
+                <h2 class="section-title">projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="maison-margiela-tabi-boots.jpg" alt="fashion study" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">fashion & cultural signals study</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">python</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">clustering</span>
+                            <span class="project-tag">tableau</span>
+                        </div>
+                        <p class="project-desc">
+                            built an end-to-end ML pipeline analyzing 10,000+ social media posts to compare algorithm-driven vs. nostalgia-driven fashion trends. used HDBSCAN and K-Means on sentence embeddings to extract 50+ semantic style groups.
+                        </p>
+                        <a href="https://github.com/alishlish/fashion-analysis" class="project-link">view project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="adc54e500d74a2540788d935ba3d5c63.jpg" alt="meal plan ai" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">college meal plan AI</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">react</span>
+                            <span class="project-tag">typescript</span>
+                            <span class="project-tag">OpenAI API</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <p class="project-desc">
+                            compressed weekly meal planning from 30-45 minutes to under 10 by building an LLM-powered planning system. engineered type-safe prompt-to-structure pipelines with 100% database integration success.
+                        </p>
+                        <a href="https://github.com/alishlish/collegemealai" class="project-link">view project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="boba3.jpg" alt="boba analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">boba shop market analysis</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">python</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">regression</span>
+                        </div>
+                        <p class="project-desc">
+                            designed a statistical analysis pipeline for 603 shop reviews, applying clustering and regression to uncover success drivers. optimized models with GridSearchCV to achieve +18% accuracy.
+                        </p>
+                        <a href="https://github.com/alishlish/boba-eda-starter" class="project-link">view on github →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="MIT-Exoplanet-Atmosphere_0.jpg" alt="exoplanet detector" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI exoplanet detector</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">python</span>
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">ML</span>
+                        </div>
+                        <p class="project-desc">
+                            developed a machine learning algorithm to detect exoplanets using telescope light curve datasets. utilized CNNs, KNNs, and SMOTE data augmentation, achieving high accuracy after 380+ test runs.
+                        </p>
+                        <a href="http://tinyurl.com/4s3y4rd8" class="project-link">view presentation →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- leadership -->
+        <section id="leadership">
+            <div class="section-header">
+                <div class="section-number">04</div>
+                <h2 class="section-title">leadership & involvement</h2>
+            </div>
+
+            <div class="leadership-grid">
+                <div class="leadership-card">
+                    <div class="leadership-image-container">
+                        <img src="wicys-group-photo.jpg" alt="wicys team" class="leadership-image">
+                    </div>
+                    <div class="leadership-content">
+                        <h3 class="leadership-title">women in cybersecurity</h3>
+                        <p class="leadership-role">president · UC irvine chapter</p>
+                        <p class="leadership-desc">
+                            leading a community of 20+ women in tech, organizing hands-on workshops, CTF competitions, and networking events. we're all about making cybersecurity accessible and building each other up.
+                        </p>
+                        <div class="leadership-links">
+                            <a href="https://wicys-uci-website.com" target="_blank" class="leadership-link">website</a>
+                            <a href="https://instagram.com/wicys_uci" target="_blank" class="leadership-link">instagram</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leadership-card">
+                    <div class="leadership-image-container">
+                        <img src="kuci-studio-photo.jpg" alt="kuci radio" class="leadership-image">
+                    </div>
+                    <div class="leadership-content">
+                        <h3 class="leadership-title">KUCI radio</h3>
+                        <p class="leadership-role">dj · student broadcaster</p>
+                        <p class="leadership-desc">
+                            hosting a weekly show where i get to blend music curation with storytelling. it's my creative outlet outside of data science, and honestly one of my favorite parts of college life.
+                        </p>
+                        <div class="leadership-links">
+                            <a href="https://kuci.org" target="_blank" class="leadership-link">listen live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- beyond the code -->
+        <section id="beyond">
+            <div class="section-header">
+                <div class="section-number">05</div>
+                <h2 class="section-title">beyond the code</h2>
+            </div>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <img src="mountain mama.jpeg" alt="hiking" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">hiking</h3>
+                        <p class="hobby-desc">my favorite way to debug my brain—nothing like fresh air and mountain views to solve that tricky algorithm problem.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="in my baking era.jpeg" alt="baking" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">baking</h3>
+                        <p class="hobby-desc">turns out precision and experimentation work just as well in the kitchen as they do in data science.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="matcha.jpeg" alt="matcha" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">matcha enthusiast</h3>
+                        <p class="hobby-desc">two years deep into my matcha obsession—perfecting the home recipe and hunting down the best matcha treats around town.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="_.jpeg" alt="skincare" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">skincare research</h3>
+                        <p class="hobby-desc">my other data-driven hobby: analyzing ingredients, testing products, and optimizing my routine.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="getaway.jpeg" alt="fashion" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">fashion & style</h3>
+                        <p class="hobby-desc">recently got into curating my wardrobe—it's another creative outlet for self-expression.</p>
+                    </div>
+                </div>
+
+                <div class="hobby-card">
+                    <img src="‧͙⁺˚_･༓☾.jpeg" alt="journaling" class="hobby-image">
+                    <div class="hobby-content">
+                        <h3 class="hobby-title">journaling</h3>
+                        <p class="hobby-desc">keeps me grounded and focused. my go-to for mental clarity and reflection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <h2>let's build something cool</h2>
+            <p>always down to chat about data, ml projects, or the best matcha spots</p>
+            <div class="social-links">
+                <a href="mailto:alishamishra082@gmail.com" class="social-link">email</a>
+                <a href="https://www.linkedin.com/in/alishamishra23" class="social-link">linkedin</a>
+                <a href="https://github.com/alishlish" class="social-link">github</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="portfolio-scripts.js"></script>
+</body>
+</html>
