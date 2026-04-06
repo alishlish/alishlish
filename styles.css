@@ -21,7 +21,7 @@
 
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--cream);
     color: var(--soft-black);
     line-height: 1.6;
@@ -156,15 +156,17 @@ nav a:hover {
 }
 
 .hero-text h1 {
+    font-family: 'DM Serif Display', Georgia, serif;
     font-size: 4.5rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 2rem;
     color: var(--soft-black);
 }
 
 .hero-text h1 strong {
-    font-weight: 600;
+    font-style: italic;
+    font-weight: 400;
     background: linear-gradient(135deg, var(--data-blue), var(--data-purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -934,4 +936,147 @@ section {
         width: 320px;
         height: 320px;
     }
+}
+
+/* ── currently learning section ───────────────────────────────────── */
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.learning-col-title {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.learning-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.learning-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.learning-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--data-blue);
+    flex-shrink: 0;
+    margin-top: 0.45rem;
+}
+
+.learning-dot--alt {
+    background: var(--data-purple);
+}
+
+.learning-name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--soft-black);
+    margin-bottom: 0.2rem;
+}
+
+.learning-detail {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--accent);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .learning-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* ── rotating subtitle ─────────────────────────────────────────────── */
+.rotating-text {
+    display: inline-block;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* ── scroll-reveal ─────────────────────────────────────────────────── */
+.fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── active nav link ───────────────────────────────────────────────── */
+nav a.nav-active {
+    color: var(--accent);
+}
+
+nav a.nav-active::before {
+    opacity: 1;
+}
+
+/* ── featured project card ─────────────────────────────────────────── */
+.project-featured {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    margin-bottom: 3rem;
+}
+
+.project-featured .project-image-container {
+    height: 100%;
+    min-height: 300px;
+}
+
+.featured-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--data-blue);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+}
+
+.project-featured .project-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .project-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-featured .project-image-container {
+        min-height: 220px;
+    }
+}
+
+/* ── section title serif ───────────────────────────────────────────── */
+.section-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+}
+
+/* ── contact heading serif ─────────────────────────────────────────── */
+.contact h2 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
 }
