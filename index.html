@@ -3,472 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alisha mishra | data science & ml</title>
+    <title>alisha mishra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- scroll progress bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- animated data visualization background -->
-    <canvas id="dataCanvas"></canvas>
-
-    <div class="content-wrapper">
-        <!-- navigation -->
-        <nav>
-            <div class="logo">alisha mishra</div>
-            <ul>
-                <li><a href="#about">about</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#learning">learning</a></li>
-                <li><a href="#leadership">leadership</a></li>
-                <li><a href="#beyond">beyond</a></li>
-                <li><a href="#contact">contact</a></li>
-            </ul>
+    <!-- Minimal site header -->
+    <header class="site-header">
+        <a href="#intro" class="site-name">ALISHA MISHRA</a>
+        <nav class="site-nav">
+            <a href="#internships">INTERNSHIPS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#involvement">INVOLVEMENT</a>
+            <a href="#contact">CONTACT</a>
         </nav>
+    </header>
 
-        <!-- hero -->
-        <section class="hero" id="about">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h1>turning data into <strong>insights</strong></h1>
-                    <p class="subtitle"><span class="rotating-text" id="rotatingText">data scientist</span></p>
-                    <p class="bio">
-                        hey! i'm alisha, a third-year data science student at UC Irvine who gets excited about finding patterns in messy datasets and building ml models that actually work. currently leading WiCyS at UCI and spending way too much time tweaking hyperparameters (but honestly, it's worth it when the accuracy jumps).
-                    </p>
-                    <p class="bio">
-                        when i'm not debugging python or exploring new ML architectures, you'll find me DJing at KUCI radio, optimizing my matcha-making process, or going down rabbit holes about nlp and data visualization.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn btn-primary">see my work</a>
-                        <a href="Alisha Mishra - Resume.pdf" class="btn" target="_blank">resume</a>
-                        <a href="#contact" class="btn">let's chat</a>
-                    </div>
+    <!-- ═══ INTRO ═══════════════════════════════════════════════════ -->
+    <section id="intro" class="intro">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <div class="intro-title">
+                    <p>I'M ALISHA MISHRA!</p>
                 </div>
-                <div class="profile-container">
-                    <div class="data-ring ring-1"></div>
-                    <div class="data-ring ring-2"></div>
-                    <div class="data-ring ring-3"></div>
-                    <div class="data-point"></div>
-                    <div class="data-point"></div>
-                    <div class="data-point"></div>
-                    <div class="data-point"></div>
-                    <div class="data-point"></div>
-                    <img src="images/IMG_9340 (1).jpg" alt="alisha mishra" class="profile-pic">
-                </div>
-            </div>
-        </section>
 
-        <!-- projects -->
-        <section id="projects">
-            <div class="section-header">
-                <div class="section-number">01</div>
-                <h2 class="section-title">projects</h2>
-            </div>
+                <p class="intro-bio">
+                I'm an incoming 4th-year at UC Irvine studying towards a B.S. in Data Science, with plans to pursue a master's in AI, statistics, or a related field.
+                </p>
+                <p class="intro-bio">
+                My interests span AI engineering, frontier AI research, and data science applications in healthcare and biomedicine.
+                I'm currently open to research opportunities, internships, and full-time roles.
+                </p>
 
-            <div class="project-card project-featured">
-                <div class="project-image-container">
-                    <img src="images/drug-checker.jpeg" alt="Clinical Drug Interaction Checker" class="project-image">
-                </div>
-                <div class="project-content">
-                    <span class="featured-label">featured project</span>
-                    <h3 class="project-title">Clinical Drug Interaction & Organ Impairment Checker</h3>
-                    <div class="project-tags">
-                        <span class="project-tag">python</span>
-                        <span class="project-tag">FastAPI</span>
-                        <span class="project-tag">OpenAI API</span>
-                        <span class="project-tag">Docker</span>
-                        <span class="project-tag">pandas</span>
-                        <span class="project-tag">javascript</span>
-                    </div>
-                    <p class="project-desc">
-                        integrated GPT-4 to generate clinician-readable drug interaction explanations, engineering prompts with medical accuracy constraints to prevent hallucinations. normalized a complex PDF-based medical dataset, cleaning 250+ medication records with 15+ attributes across inconsistent tables. built a constant-time screening pipeline covering 250+ medications with organ impairment considerations—deployed as a Docker-containerized FastAPI app on Render.
-                    </p>
-                    <a href="https://github.com/alishlish/drug-interaction-checker" target="_blank" class="project-link">view project →</a>
+                <div class="intro-cta">
+                    <a href="#projects" class="cta-btn cta-btn--solid">SEE MY WORK</a>
+                    <a href="Alisha Mishra - Resume.pdf" target="_blank" class="cta-btn">RESUME</a>
+                    <a href="mailto:alishamishra082@gmail.com" class="cta-btn">LET'S CHAT</a>
                 </div>
             </div>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="images/maison-margiela-tabi-boots.jpg" alt="fashion study" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">fashion & cultural signals study</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">python</span>
-                            <span class="project-tag">NLP</span>
-                            <span class="project-tag">clustering</span>
-                            <span class="project-tag">tableau</span>
-                        </div>
-                        <p class="project-desc">
-                            built an end-to-end ML pipeline analyzing 10,000+ social media posts to compare algorithm-driven vs. nostalgia-driven fashion trends. used HDBSCAN and K-Means on sentence embeddings to extract 50+ semantic style groups. validated trend diffusion patterns in Tableau against Google Trends.
-                        </p>
-                        <a href="https://github.com/alishlish/fashion-analysis" class="project-link">view project →</a>
-                    </div>
-                </div>
+            <div class="intro-photo-col">
+                <img src="images/IMG_9340 (1).jpg" alt="alisha mishra" class="intro-photo">
+            </div>
+        </div>
 
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="images/meal-plan.jpg" alt="meal plan ai" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">college meal plan AI</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">react</span>
-                            <span class="project-tag">typescript</span>
-                            <span class="project-tag">OpenAI API</span>
-                            <span class="project-tag">supabase</span>
-                            <span class="project-tag">vite</span>
-                        </div>
-                        <p class="project-desc">
-                            compressed weekly meal planning from 30–45 minutes to under 10 by building an LLM-powered planning system. engineered type-safe prompt-to-structure pipelines with TypeScript interfaces and JSON schema validation, transforming natural-language AI output into validated recipe objects with 100% database integration success.
-                        </p>
-                        <a href="https://github.com/alishlish/collegemealai" class="project-link">view project →</a>
-                    </div>
+        <div class="background-grid">
+            <div class="background-col">
+                <span class="col-label">TECHNICAL TOOLKIT</span>
+                <div class="toolkit-col">
+                    <span class="toolkit-label">PROGRAMMING</span>
+                    <span class="toolkit-items">Python — R — C/C++ — SQL<br>JavaScript — TypeScript — HTML — Git</span>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="images/boba3.jpg" alt="boba analysis" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">boba shop market analysis</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">python</span>
-                            <span class="project-tag">scikit-learn</span>
-                            <span class="project-tag">regression</span>
-                            <span class="project-tag">clustering</span>
-                        </div>
-                        <p class="project-desc">
-                            designed an end-to-end statistical analysis pipeline for 603 shop reviews, applying clustering and regression to uncover market success drivers. optimized models with GridSearchCV to +18% accuracy and delivered insights via automated dashboards for market-entry strategy.
-                        </p>
-                        <a href="https://github.com/alishlish/boba-eda-starter" class="project-link">view on github →</a>
-                    </div>
+                <div class="toolkit-col">
+                    <span class="toolkit-label">ML &amp; STATISTICS</span>
+                    <span class="toolkit-items">Regression — Clustering — NLP<br>Time-Series — Hypothesis Testing<br>Experimental Design</span>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="images/MIT-Exoplanet-Atmosphere_0.jpg" alt="exoplanet detector" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI exoplanet detector</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">python</span>
-                            <span class="project-tag">CNN</span>
-                            <span class="project-tag">SMOTE</span>
-                            <span class="project-tag">ML</span>
-                        </div>
-                        <p class="project-desc">
-                            developed a machine learning algorithm to detect exoplanets using telescope light curve datasets. utilized CNNs, KNNs, and SMOTE data augmentation across 380+ test runs to handle class imbalance and push detection accuracy.
-                        </p>
-                        <a href="http://tinyurl.com/4s3y4rd8" class="project-link">view presentation →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="images/Untitled_Artwork 18 1.png" alt="UCI housing planning app" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">UCI housing planning app prototype</h3>
-                        <div class="project-tags">
-                            <span class="project-tag">figma</span>
-                            <span class="project-tag">UI/UX</span>
-                            <span class="project-tag">prototyping</span>
-                        </div>
-                        <p class="project-desc">
-                            designed a mobile app prototype for a design competition focused on streamlining the UCI housing process. led UI/UX design for the planner, compare, and saved routes features—creating intuitive interfaces that help users easily compare options depending on their preferences.
-                        </p>
-                        <a href="https://www.figma.com/deck/zSKupKPVw5V4qGdxOoM7Fi" target="_blank" class="project-link">view presentation →</a>
-                    </div>
+                <div class="toolkit-col">
+                    <span class="toolkit-label">FRAMEWORKS &amp; TOOLS</span>
+                    <span class="toolkit-items">scikit-learn — Pandas — NumPy<br>React — FastAPI — Supabase — Docker<br>Tableau — Figma — Jupyter — ggplot2</span>
                 </div>
             </div>
-        </section>
 
-        <!-- experience timeline -->
-        <section id="experience">
-            <div class="section-header">
-                <div class="section-number">02</div>
-                <h2 class="section-title">experience</h2>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">june 2025 – present</div>
-                    <h3 class="timeline-title">president</h3>
-                    <p class="timeline-org">women in cybersecurity, UC irvine chapter</p>
-                    <p class="timeline-desc">• revitalized WiCyS from 5 to 20+ active members using data-driven outreach strategies to grow technical engagement</p>
-                    <p class="timeline-desc">• scaled programming from 3 to 9 events per quarter, tracking participation metrics to continuously improve attendance</p>
-                    <p class="timeline-desc">• organized a 10-member executive board with clear roles, workflows, and documentation—improving event coordination efficiency by 3x</p>
-                    <p class="timeline-desc">• delivered hands-on training to 60+ students in OSINT, threat analysis, cloud security, and CTF problem solving</p>
-                    <div class="timeline-links">
-                        <a href="https://wicys-uci-website.com" target="_blank" class="timeline-link">website</a>
-                        <a href="https://instagram.com/wicys_uci" target="_blank" class="timeline-link">instagram</a>
-                    </div>
+            <div class="background-col">
+                <span class="col-label">EXPERIENCE</span>
+                <div class="col-item">
+                    <span class="col-year">JUNE 2026 — PRESENT</span>
+                    <span class="col-title">AI ENGINEERING INTERN, <br>BLUEPRINT APPS</span>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">may 2023 – jan 2024</div>
-                    <h3 class="timeline-title">research intern</h3>
-                    <p class="timeline-org">south dakota state university · mechanical engineering dept</p>
-                    <p class="timeline-desc">• contributed to biomimetic materials research studying how nacre's layered aragonite microstructure achieves its rare combination of stiffness and toughness—and how to engineer that same balance into lightweight structural composites for space vehicles</p>
-                    <p class="timeline-desc">• synthesized ~10 research papers on bio-inspired structural design, distilling key microstructural parameters and failure modes to sharpen the team's simulation approach</p>
-                    <p class="timeline-desc">• analyzed simulation outputs across 5–10 material configurations in python, comparing how variations in layering geometry affected load-bearing performance</p>
+                <div class="col-item">
+                    <span class="col-year">JUNE 2026 — PRESENT</span>
+                    <span class="col-title">DATA & AI INTERN, <br>PASHTEK</span>
+                </div>
+                <div class="col-item">
+                    <span class="col-year">MAY 2025 — PRESENT</span>
+                    <span class="col-title">PRESIDENT,<br>WICYS UCI CHAPTER</span>
+                </div>
+                <div class="col-item">
+                    <span class="col-year">2024 — 2025</span>
+                    <span class="col-title">PROGRAM COORDINATOR,<br>WICYS UCI CHAPTER</span>
+                </div>
+                <div class="col-item">
+                    <span class="col-year">2022 — 2023</span>
+                    <span class="col-title">RESEARCH INTERN,<br>SDSU MECH. ENGINEERING</span>
                 </div>
             </div>
-        </section>
 
-        <!-- skills -->
-        <section>
-            <div class="section-header">
-                <div class="section-number">03</div>
-                <h2 class="section-title">technical toolkit</h2>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>programming</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">javascript</span>
-                        <span class="skill-tag">typescript</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">git</span>
-                    </div>
+            <div class="background-col">
+                <span class="col-label">CURRENTLY LEARNING</span>
+                <div class="col-item">
+                    <span class="col-year">2026</span>
+                    <span class="col-title">MATHEMATICAL STATISTICS III</span>
                 </div>
-
-                <div class="skill-category">
-                    <h3>ml & statistics</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">regression</span>
-                        <span class="skill-tag">clustering</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">time-series</span>
-                        <span class="skill-tag">hypothesis testing</span>
-                        <span class="skill-tag">experimental design</span>
-                    </div>
+                <div class="col-item">
+                    <span class="col-year">2026</span>
+                    <span class="col-title">LONGITUDINAL DATA ANALYSIS</span>
                 </div>
-
-                <div class="skill-category">
-                    <h3>frameworks & tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">pandas</span>
-                        <span class="skill-tag">numpy</span>
-                        <span class="skill-tag">react</span>
-                        <span class="skill-tag">vite</span>
-                        <span class="skill-tag">fastAPI</span>
-                        <span class="skill-tag">supabase</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">docker</span>
-                        <span class="skill-tag">vercel</span>
-                        <span class="skill-tag">tableau</span>
-                        <span class="skill-tag">figma</span>
-                        <span class="skill-tag">jupyter</span>
-                        <span class="skill-tag">ggplot2</span>
-                    </div>
+                <div class="col-item">
+                    <span class="col-year">2026</span>
+                    <span class="col-title">INTRODUCTION TO AI</span>
+                </div>
+                <div class="col-item">
+                    <span class="col-year">2026</span>
+                    <span class="col-title">DATABASE STRUCTURES</span>
+                </div>
+                <div class="col-item">
+                    <span class="col-year">ON MY OWN TIME</span>
+                    <span class="col-title">AI-AUGMENTED WORKFLOWS,<br>PRODUCT DESIGN,<br>PCOS RESEARCH — ONLINE HEALTHCARE<br>DISMISSAL VS. RESEARCH GAPS IN<br>WOMEN'S HEALTH</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- currently learning -->
-        <section id="learning">
-            <div class="section-header">
-                <div class="section-number">04</div>
-                <h2 class="section-title">currently learning</h2>
+    <!-- ═══ INTERNSHIPS ═════════════════════════════════════════════ -->
+    <section id="internships" class="section-roomy">
+        <div class="compact-header">INTERNSHIPS</div>
+
+        <div class="job-list">
+            <div class="job-item">
+                <div class="job-head">
+                    <span class="job-title">BLUEPRINT APPS</span>
+                    <span class="job-meta">AI ENGINEERING INTERN — REMOTE — JUNE 2026 – PRESENT</span>
+                </div>
+                <ul class="job-bullets">
+                    <li>Building a desktop application that scores candidate interview transcripts against role-specific rubrics using a RAG-based pipeline benchmarked against historical placement data via embedding similarity</li>
+                    <li>Developing a cross-validation layer that checks resume claims against live interview transcripts to surface inconsistencies</li>
+                    <li>Collaborating directly with the founder to define the scoring rubric structure and standardize interview evaluation, aimed at reducing bias in the hiring process</li>
+                </ul>
             </div>
 
-            <div class="learning-grid">
-                <div class="learning-column">
-                    <h3 class="learning-col-title">in the classroom</h3>
-                    <ul class="learning-list">
-                        <li class="learning-item">
-                            <span class="learning-dot"></span>
-                            <div>
-                                <span class="learning-name">mathematical statistics III</span>
-                                <span class="learning-detail">inference theory & estimation — STATS 120C, UCI</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot"></span>
-                            <div>
-                                <span class="learning-name">longitudinal data analysis</span>
-                                <span class="learning-detail">repeated measures, mixed models, temporal trends</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot"></span>
-                            <div>
-                                <span class="learning-name">introduction to AI</span>
-                                <span class="learning-detail">search, reasoning, and learning systems</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot"></span>
-                            <div>
-                                <span class="learning-name">database structures</span>
-                                <span class="learning-detail">relational design, indexing, query optimization</span>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="job-item">
+                <div class="job-head">
+                    <span class="job-title">PASHTEK</span>
+                    <span class="job-meta">DATA &amp; AI INTERN — REMOTE — JUNE 2026 – PRESENT</span>
                 </div>
+                <ul class="job-bullets">
+                    <li>Supporting Salesforce CRM data analytics initiatives for client engagement</li>
+                    <li>Applying Apache Spark and AWS-based compute infrastructure to assist with data processing workflows</li>
+                    <li>Working alongside the consulting team on Salesforce-based client data projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-                <div class="learning-column">
-                    <h3 class="learning-col-title">on my own time</h3>
-                    <ul class="learning-list">
-                        <li class="learning-item">
-                            <span class="learning-dot learning-dot--alt"></span>
-                            <div>
-                                <span class="learning-name">AI-augmented workflows</span>
-                                <span class="learning-detail">building faster, smarter processes with LLM tooling</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot learning-dot--alt"></span>
-                            <div>
-                                <span class="learning-name">data visualization</span>
-                                <span class="learning-detail">tableau — dashboards, storytelling with data</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot learning-dot--alt"></span>
-                            <div>
-                                <span class="learning-name">product design</span>
-                                <span class="learning-detail">figma — UI/UX, prototyping, design systems</span>
-                            </div>
-                        </li>
-                        <li class="learning-item">
-                            <span class="learning-dot learning-dot--alt"></span>
-                            <div>
-                                <span class="learning-name">ML for early PCOS detection</span>
-                                <span class="learning-detail">early-stage research interest — exploring clinical datasets and diagnostic modeling</span>
-                            </div>
-                        </li>
-                    </ul>
+    <!-- ═══ PROJECTS ═══════════════════════════════════════════════════ -->
+    <section id="projects" class="works">
+
+        <div class="works-title">
+            <p>// PROJECTS</p>
+        </div>
+
+        <div class="works-list">
+            <div class="works-list-border"></div>
+
+            <a href="https://github.com/alishlish/drug-interaction-checker" target="_blank" class="work-item">
+                <img src="images/drug-checker.jpeg" alt="clinical drug interaction checker" class="work-thumb">
+                <span class="work-num">1</span>
+                <div class="work-body">
+                    <span class="work-title">CLINICAL DRUG INTERACTION<br>CHECKER</span>
+                    <span class="work-sub">PYTHON — FASTAPI — OPENAI API<br>DOCKER — PANDAS — JAVASCRIPT</span>
+                    <span class="work-year">2024—2025</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/alishlish/fashion-analysis" target="_blank" class="work-item">
+                <img src="images/maison-margiela-tabi-boots.jpg" alt="fashion and cultural signals study" class="work-thumb">
+                <span class="work-num">2</span>
+                <div class="work-body">
+                    <span class="work-title">FASHION &amp; CULTURAL<br>SIGNALS STUDY</span>
+                    <span class="work-sub">PYTHON — NLP — CLUSTERING<br>TABLEAU</span>
+                    <span class="work-year">2024</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/alishlish/collegemealai" target="_blank" class="work-item">
+                <img src="images/meal-plan.jpg" alt="college meal plan ai" class="work-thumb">
+                <span class="work-num">3</span>
+                <div class="work-body">
+                    <span class="work-title">COLLEGE MEAL PLAN AI</span>
+                    <span class="work-sub">REACT — TYPESCRIPT<br>OPENAI API — SUPABASE — VITE</span>
+                    <span class="work-year">2024</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/alishlish/boba-eda-starter" target="_blank" class="work-item">
+                <img src="images/boba3.jpg" alt="boba shop market analysis" class="work-thumb">
+                <span class="work-num">4</span>
+                <div class="work-body">
+                    <span class="work-title">BOBA SHOP MARKET ANALYSIS</span>
+                    <span class="work-sub">PYTHON — SCIKIT-LEARN<br>REGRESSION — CLUSTERING</span>
+                    <span class="work-year">2023</span>
+                </div>
+            </a>
+
+            <a href="http://tinyurl.com/4s3y4rd8" target="_blank" class="work-item">
+                <img src="images/ai_exoplanet_detector.png" alt="ai exoplanet detector" class="work-thumb">
+                <span class="work-num">5</span>
+                <div class="work-body">
+                    <span class="work-title">AI EXOPLANET DETECTOR</span>
+                    <span class="work-sub">PYTHON — CNN — SMOTE — ML</span>
+                    <span class="work-year">2023</span>
+                </div>
+            </a>
+
+            <a href="https://www.figma.com/deck/zSKupKPVw5V4qGdxOoM7Fi" target="_blank" class="work-item">
+                <img src="/Users/alishamishra/Desktop/projects/alishlish/alishlish/images/Untitled_Artwork 18 1.png" alt="figma" class="work-thumb">
+                <span class="work-num">6</span>
+                <div class="work-body">
+                    <span class="work-title">UCI HOUSING PLANNING APP</span>
+                    <span class="work-sub">FIGMA — UI/UX — PROTOTYPING</span>
+                    <span class="work-year">2023</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ INVOLVEMENT ══════════════════════════════════════════ -->
+    <section id="involvement" class="section-compact">
+        <div class="compact-header">INVOLVEMENT</div>
+        <div class="involvement-grid">
+            <div class="involvement-item">
+                <img src="images/IMG_9409.JPG" alt="wicys" class="involvement-img">
+                <span class="inv-title">WOMEN IN CYBERSECURITY</span>
+                <span class="inv-role">PRESIDENT — UC IRVINE CHAPTER</span>
+                <span class="inv-desc">leading a community of 20+ women in tech. organizing workshops, CTF competitions, and networking events.</span>
+                <div class="inv-links">
+                    <a href="https://wicys-uci-website.com" target="_blank">WEBSITE</a>
+                    <a href="https://instagram.com/wicys_uci" target="_blank">INSTAGRAM</a>
                 </div>
             </div>
-        </section>
-
-        <!-- leadership -->
-        <section id="leadership">
-            <div class="section-header">
-                <div class="section-number">05</div>
-                <h2 class="section-title">leadership & involvement</h2>
+            <div class="involvement-item">
+                <img src="images/CTF copy.png" alt="cyber@uci" class="involvement-img">
+                <span class="inv-title">CYBER @ UCI</span>
+                <span class="inv-role">LIASION & MEMBER</span>
+                <span class="inv-desc">helping run CTF & forensic analysis competitions.</span>
             </div>
-
-            <div class="leadership-grid">
-                <div class="leadership-card">
-                    <div class="leadership-image-container">
-                        <img src="images/IMG_9409.JPG" alt="wicys team" class="leadership-image">
-                    </div>
-                    <div class="leadership-content">
-                        <h3 class="leadership-title">women in cybersecurity</h3>
-                        <p class="leadership-role">president · UC irvine chapter</p>
-                        <p class="leadership-desc">
-                            leading a community of 20+ women in tech, organizing hands-on workshops, CTF competitions, and networking events. we're all about making cybersecurity accessible and building each other up.
-                        </p>
-                        <div class="leadership-links">
-                            <a href="https://wicys-uci-website.com" target="_blank" class="leadership-link">website</a>
-                            <a href="https://instagram.com/wicys_uci" target="_blank" class="leadership-link">instagram</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="leadership-card">
-                    <div class="leadership-image-container">
-                        <img src="images/IMG_7420 2.jpg" alt="kuci radio" class="leadership-image">
-                    </div>
-                    <div class="leadership-content">
-                        <h3 class="leadership-title">KUCI radio</h3>
-                        <p class="leadership-role">dj · student broadcaster</p>
-                        <p class="leadership-desc">
-                            hosting a weekly show where i get to blend music curation with storytelling. it's my creative outlet outside of data science, and honestly one of my favorite parts of college life.
-                        </p>
-                        <div class="leadership-links">
-                            <a href="https://kuci.org" target="_blank" class="leadership-link">listen live</a>
-                        </div>
-                    </div>
+            <div class="involvement-item">
+                <img src="images/design-uci.jpg" alt="design@uci" class="involvement-img">
+                <span class="inv-title">DESIGN @ UCI</span>
+                <span class="inv-role">UI/UX DESIGNER</span>
+                <span class="inv-desc">designing UI/UX for prototyping projects, from wireframes to high-fidelity prototypes.</span>
+            </div>
+            <div class="involvement-item">
+                <img src="images/IMG_7420 2.jpg" alt="kuci" class="involvement-img">
+                <span class="inv-title">KUCI RADIO</span>
+                <span class="inv-role">DJ — STUDENT BROADCASTER & VOLUNTEER</span>
+                <span class="inv-desc">hosting a weekly show blending music curation with storytelling. organizing music and PSA tapes.</span>
+                <div class="inv-links">
+                    <a href="https://kuci.org" target="_blank">LISTEN LIVE</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- beyond the code -->
-        <section id="beyond">
-            <div class="section-header">
-                <div class="section-number">06</div>
-                <h2 class="section-title">beyond the code</h2>
+    <!-- ═══ CONTACT ══════════════════════════════════════════════ -->
+    <footer id="contact" class="contact-section">
+        <div class="contact-row">
+            <span class="contact-name">ALISHA MISHRA</span>
+            <div class="contact-links">
+                <a href="mailto:alishamishra082@gmail.com">EMAIL</a>
+                <a href="https://www.linkedin.com/in/alishamishra23">LINKEDIN</a>
+                <a href="https://github.com/alishlish">GITHUB</a>
+                <a href="Alisha Mishra - Resume.pdf" target="_blank">RESUME</a>
             </div>
-
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <img src="images/mountain mama.jpeg" alt="hiking" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">hiking</h3>
-                        <p class="hobby-desc">my favorite way to debug my brain—nothing like fresh air and mountain views to solve that tricky algorithm problem.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-card">
-                    <img src="images/in my baking era.jpeg" alt="baking" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">baking</h3>
-                        <p class="hobby-desc">turns out precision and experimentation work just as well in the kitchen as they do in data science.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-card">
-                    <img src="images/matcha.jpeg" alt="matcha" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">matcha enthusiast</h3>
-                        <p class="hobby-desc">two years deep into my matcha obsession—perfecting the home recipe and hunting down the best matcha treats around town.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-card">
-                    <img src="images/_.jpeg" alt="skincare" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">skincare research</h3>
-                        <p class="hobby-desc">my other data-driven hobby: analyzing ingredients, testing products, and optimizing my routine.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-card">
-                    <img src="images/getaway.jpeg" alt="fashion" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">fashion & style</h3>
-                        <p class="hobby-desc">recently got into curating my wardrobe—it's another creative outlet for self-expression.</p>
-                    </div>
-                </div>
-
-                <div class="hobby-card">
-                    <img src="images/‧͙⁺˚_･༓☾.jpeg" alt="journaling" class="hobby-image">
-                    <div class="hobby-content">
-                        <h3 class="hobby-title">journaling</h3>
-                        <p class="hobby-desc">keeps me grounded and focused. my go-to for mental clarity and reflection.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- contact -->
-        <section class="contact" id="contact">
-            <h2>let's build something cool</h2>
-            <p>always down to chat about data, ml projects, or the best matcha spots</p>
-            <div class="social-links">
-                <a href="mailto:alishamishra082@gmail.com" class="social-link">email</a>
-                <a href="https://www.linkedin.com/in/alishamishra23" class="social-link">linkedin</a>
-                <a href="https://github.com/alishlish" class="social-link">github</a>
-            </div>
-        </section>
-    </div>
+        </div>
+        <span class="contact-copy">&copy; 2025 All rights reserved</span>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
